@@ -1,0 +1,40 @@
+const { chromium } = require(process.env.CODEQUIZ_PLAYWRIGHT_PATH || 'playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const base = process.env.CODEQUIZ_BASE_URL || 'http://127.0.0.1:4173/';
+(async () => {
+    const browser = await chromium.launch({ channel: 'chrome', headless: true });
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    const errors = [], passed = [];
+    page.on('pageerror', e => errors.push(e.message));
+    try {
+        await page.goto(base + 'contact.html');
+        assert.equal(await page.locator('input[name="contact-reply"]').count(), 0);
+        assert.doesNotMatch(await page.locator('#contact-form').innerText(), /Preferred reply method/);
+        passed.push('Contact form offers only fields that are used by local feedback');
+        await page.goto(base + 'study.html');
+        await page.locator('#plan-name').fill('Storage Student');
+        await page.locator('#plan-next').click();
+        await page.locator('#plan-topic').selectOption('java');
+        await page.locator('#plan-next').click();
+        await page.locator('#sound-enabled').uncheck();
+        await page.evaluate(() => { Storage.prototype.setItem = function () { throw new DOMException('Storage full', 'QuotaExceededError'); }; });
+        await page.locator('#plan-finish').click();
+        assert.match(await page.locator('#plan-result').innerText(), /Storage Student/);
+        assert.match(await page.locator('#plan-save-note').innerText(), /could not be saved/);
+        assert.equal(await page.evaluate(() => localStorage.getItem(CodeQuizStorage.key('practice-plan'))), null);
+        passed.push('Plan remains usable and reports persistence failure when browser storage is full');
+        await page.locator('#plan-reset').click();
+        assert.match(await page.locator('#plan-save-note').innerText(), /Create a plan/);
+        assert.equal(await page.locator('#plan-name').inputValue(), '');
+        assert.ok(await page.locator('#copy-plan').isHidden());
+        passed.push('Reset clears the plan and shows an accurate unsaved state');
+        assert.deepEqual(errors, []);
+        const output = path.join(__dirname, '../report/final/submission-regression-results.json');
+        fs.mkdirSync(path.dirname(output), { recursive: true });
+        fs.writeFileSync(output, JSON.stringify({ verifiedAt: new Date().toISOString(), base, browser: browser.version(), passed, errors }, null, 2));
+        for (const name of passed) console.log('PASS', name);
+    } finally { await context.close(); await browser.close(); }
+})().catch(e => { console.error(e.stack); process.exitCode = 1; });

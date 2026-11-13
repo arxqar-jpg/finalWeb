@@ -1,7 +1,7 @@
 {
-  "verifiedAt": "2026-11-13T05:54:00.246Z",
+  "verifiedAt": "2026-11-13T08:03:16.396Z",
   "base": "http://127.0.0.1:4173/",
-  "browser": "157.0.8103.39",
+  "browser": "157.0.8103.78",
   "passed": [
     "Local API returns the curated 18-question bank and all pages initialize offline jQuery",
     "Loading, HTTP error, Retry, malformed JSON and static-host fallback are real request paths",

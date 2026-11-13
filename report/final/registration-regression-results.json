@@ -1,7 +1,7 @@
 {
-  "verifiedAt": "2026-11-13T05:56:10.903Z",
+  "verifiedAt": "2026-11-13T08:05:41.650Z",
   "base": "http://127.0.0.1:4173/",
-  "browser": "157.0.8103.39",
+  "browser": "157.0.8103.78",
   "passed": [
     "Typing and correcting a password keeps registration open on the same page",
     "A backdrop click does not dismiss a registration form with entered details",

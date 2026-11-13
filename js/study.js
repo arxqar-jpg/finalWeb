@@ -304,14 +304,14 @@ function initStudyLab() {
             if (topics[i].category === plan.topic) $("#plan-quiz-link").attr("href", topics[i].link).show();
         }
         $(".plan-result-panel").addClass("completed").stop(true, true).css("opacity", 0.4).animate({ opacity: 1 }, 250);
-        CodeQuizStorage.write("practice-plan", { name:plan.name, topic:plan.topic, minutes:plan.minutes });
-        $("#plan-save-note").text("Saved on this browser. You can return to this plan later.");
+        var saved = CodeQuizStorage.write("practice-plan", { name:plan.name, topic:plan.topic, minutes:plan.minutes });
+        $("#plan-save-note").text(saved ? "Saved on this browser. You can return to this plan later." : "Your plan is ready for this page, but could not be saved to browser storage. Copy it before leaving.");
         playSound();
     });
 
     document.getElementById("plan-reset").addEventListener("click", function () {
         CodeQuizStorage.remove("practice-plan");
-        $("#plan-save-note").text("Your completed plan is saved on this browser.");
+        $("#plan-save-note").text("Create a plan to save your next practice session.");
         resetCopyButton();
         $("#copy-plan").prop("hidden", true);
         document.getElementById("practice-plan").reset();

@@ -4,7 +4,7 @@ Team Spirit: Darkhan Saduakasov және Kassymkhan, SE 2508.
 
 Мақсат: бағдарламалауды енді үйреніп жүрген студенттерге Java, Python және HTML/CSS бойынша қысқа quiz арқылы жаттығуға көмектесу. Қате жауаптан кейін түсіндірме мен келесі оқу қадамын көрсету.
 
-Бағалау туралы: чатқа берілген Final рубрикасы Overall Presentation үшін 100 баллдың 5 баллын көрсетеді. Ал бастапқы архивтегі 60/40 үлесі бұрынғы Endterm сипаттамасына қатысты. Бөлек Final Presentation Guideline PDF-і LMS логинін сұрайды, сондықтан осы құжаттан бүкіл defense үлесі жеке расталған жоқ. Presentation тармағындағы 5%-ды автоматты түрде бүкіл defense салмағы деп түсіндірмеңдер.
+Бағалау: Final рубрикасында Overall Presentation — 5/100 балл. Presentation Guideline бойынша максимум 5 минут; мақсат 4:30–5:00. Әр артық 30 секунд үшін −2 балл. Екі қатысушы да сөйлеуі немесе демонстрация жасауы керек.
 
 ## Көрсететін ағын
 
@@ -16,7 +16,19 @@ Team Spirit: Darkhan Saduakasov және Kassymkhan, SE 2508.
 6. Overview-та search/filter, Study Lab-та жоспар жасау және GitHub API ресурстарының жүктелуін көрсетіңдер.
 7. Code-тан fetch/async-await және loading/error/retry логикасын қысқаша түсіндіріңдер. Соңында нақты live/repository сілтемелерін көрсетіңдер.
 
-Нақты уақыт лимитін LMS-тегі presentation guideline бойынша ұстаныңдар. Осы тізімге қарап алдын ала таймермен жаттығыңдар; барлық кодты жол-жолымен оқымаңдар.
+Тайминг: 0:00–0:35 таныстыру, топ, мақсат және аудитория; 0:35–1:20 responsive, modes және design; 1:20–2:30 validation, registration, login және Profile; 2:30–3:35 quiz, results және search; 3:35–4:20 planner және API; 4:20–4:50 негізгі артықшылықтар, болашақ жақсарту және алғыс. Kassymkhan таныстыру мен interface-ті, Darkhan quiz/API-ді көрсетеді; қорытындыға екеуі де қатысады. Бұл — дайындық жоспары.
+
+Кодты live өзгертпеңдер. Байланыс үзілсе көрсету үшін PDF-тегі screenshots немесе қысқа video demo дайындаңдар. Болашақ жақсарту мысалы: backend accounts және көбірек quiz сұрақтары.
+
+## Moodle-ға тапсыру
+
+Екеуің де FINAL EXAM FOLDER-ға үш файлды бірге, жеке аккаунттарыңнан тапсырасыңдар:
+
+- CodeQuiz_SE2508_FinalProject.zip
+- CodeQuiz_SE2508_Report.pdf
+- CodeQuiz_SE2508_Links.txt
+
+Guideline report үшін PDF only деп нақты жазады; naming example ішіндегі .docx-ты қолданбаңдар. Қате формат, жетіспейтін файл немесе жеке тапсырмау үшін −30 балл көрсетілген. Links.txt ішінде repository мен live URL екеуі де болуы керек.
 
 ## Қай кодты білу керек
 

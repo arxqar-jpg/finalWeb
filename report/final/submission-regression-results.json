@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-11-13T08:05:48.066Z",
+  "base": "http://127.0.0.1:4173/",
+  "browser": "157.0.8103.78",
+  "passed": [
+    "Contact form offers only fields that are used by local feedback",
+    "Plan remains usable and reports persistence failure when browser storage is full",
+    "Reset clears the plan and shows an accurate unsaved state"
+  ],
+  "errors": []
+}

@@ -4,7 +4,7 @@
 |---|---|
 | At least 6 connected functional pages | Overview, Quizzes, Study Lab, About, Contacts, Profile. Each page links to all six through main navigation. |
 | Responsive layout (10) | Bootstrap grid, Flexbox and CSS Grid; mobile navigation; readable stacked forms and cards. Tested at 320, 360, 390, 768, 992 and 1440 px. |
-| Hosting (5) | Static-host-compatible source and deployment instructions. Actual final publication and live/repository URLs must be verified before submission; localhost is not hosting. |
+| Hosting (5) | GitHub Pages at https://arxqar-jpg.github.io/finalWeb/; source at https://github.com/arxqar-jpg/finalWeb. Verify the new publication after any source update. |
 | Light/Dark (5) | Accessible switch in every header; persistent localStorage value; theme-aware controls, cards, code and validation errors. |
 | Design/UX (20) | Existing Forest visual identity, local imagery/icons/fonts, consistent navigation and spacing; explicit beginner-programming purpose. |
 | Authentication simulation | js/auth.js: localStorage registration, case-normalized duplicate-email check, credential comparison, session, redirect to Profile, displayed details and logout. |

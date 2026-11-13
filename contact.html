@@ -104,17 +104,6 @@
                             <option value="feedback">Quiz Feedback / Bug Report</option>
                         </select>
                     </div>
-                    <fieldset class="col-12">
-                        <legend class="form-label fs-6 fw-bold mb-2">Preferred reply method</legend>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="reply-preference" id="reply-email" value="email" checked>
-                            <label class="form-check-label" for="reply-email">Email</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="reply-preference" id="reply-no-preference" value="no-preference">
-                            <label class="form-check-label" for="reply-no-preference">No preference</label>
-                        </div>
-                    </fieldset>
                     <div class="col-12">
                         <label for="user-message" class="form-label fw-bold">Message <span class="text-danger">*</span></label>
                         <textarea id="user-message" aria-describedby="err-user-message" name="message" class="form-control" rows="5" placeholder="Enter your message (10–2000 characters)..."></textarea>
@@ -124,7 +113,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="yes" id="contact-consent" aria-describedby="err-contact-consent">
                             <label class="form-check-label" for="contact-consent">I agree to save my details with this feedback on this browser. <span class="text-danger">*</span></label>
-                            <div class="invalid-feedback" id="err-contact-consent" aria-live="polite">You must consent to be contacted.</div>
+                            <div class="invalid-feedback" id="err-contact-consent" aria-live="polite">Please agree to save this feedback on your browser.</div>
                         </div>
                     </div>
                     <div class="col-12">

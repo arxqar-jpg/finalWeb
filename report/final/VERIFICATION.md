@@ -6,7 +6,8 @@
 - 4 storage edge groups: mixed-score retries, quota failure, denied localStorage and cross-tab updates.
 - 14 final requirement groups: six-page navigation, JS-only validation, registration/login/Profile/logout, duplicate email, account isolation, saved search/feedback, theme persistence and contrast, real GitHub API, loading/errors/retry/cache/malformed responses, keyboard modal controls, gallery/Copy plan, mobile forms and static repository-subpath hosting.
 - 5 registration regression groups: password entry, backdrop clicks, unrelated cross-tab registration, explicit success/Continue and cross-tab logout with the saved plan preserved.
-- Total: **35 passed groups**, with no recorded JavaScript runtime errors.
+- 3 submission regression groups: contact fields reflect local feedback behavior, planner reports denied persistence, and Reset shows an accurate empty state.
+- Total: **38 passed groups**, with no recorded JavaScript runtime errors.
 - Six pages checked at 320, 360, 390, 768, 992 and 1440 px; additional mobile account/API checks in both themes.
 - Local HTML/CSS assets checked; no missing references found. Study gallery images load when scrolled into view.
 - Runtime forms, including the shared account dialog, checked for novalidate and absence of the prohibited native validation attributes.

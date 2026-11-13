@@ -83,6 +83,12 @@ npm test
 
 ## Publication and submission
 
-This package is prepared for local review and static hosting. A localhost URL is not an online submission link. See `DEPLOYMENT.md` to publish the final source, verify it and submit both the live and repository URLs. No previous live site should be described as this final version until it is updated.
+Repository: https://github.com/arxqar-jpg/finalWeb
+
+Live website: https://arxqar-jpg.github.io/finalWeb/
+
+Each team member must submit these three files together in Moodle's FINAL EXAM FOLDER: `CodeQuiz_SE2508_FinalProject.zip`, `CodeQuiz_SE2508_Report.pdf` and `CodeQuiz_SE2508_Links.txt`. The report includes the team, goal, work division, main pages, functionality, design decisions and screenshots. The links file contains both URLs above. The guideline explicitly requires a PDF report; its `.docx` naming example conflicts with that rule.
+
+See `DEPLOYMENT.md` when updating the hosted source. Verify all six direct page URLs and the account/quiz/API flows after each publication.
 
 `REQUIREMENTS.md` maps implementation to the supplied rubric. `PRESENTATION-KZ.md` provides a concise demonstration and code explanation checklist. Presentation performance and the actual public deployment cannot be established by a ZIP alone.
