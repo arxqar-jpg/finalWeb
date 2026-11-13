@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "topics": [
+    {
+      "id": "java", "title": "Java foundations", "language": "Java", "category": "java", "description": "Read Java code, follow its state and choose the result.",
+      "questions": [
+        {"id":"java-score","skill":"Variables","prompt":"Inside main(...), what will this score update print?","code":"int score = 2;\nscore += 3;\nSystem.out.println(score);","options":["5","2","23"],"answer":0,"explanation":"score += 3 adds 3 to the current integer value 2. The result is 5, not string concatenation."},
+        {"id":"java-loop","skill":"Loops","prompt":"Inside main(...), what is the final value printed by this loop?","code":"int total = 0;\nfor (int i = 1; i <= 3; i++) {\n    total += i;\n}\nSystem.out.println(total);","options":["3","6","5"],"answer":1,"explanation":"The loop visits 1, 2 and 3 because the condition includes 3. Their sum is 6."},
+        {"id":"java-object","skill":"Objects","prompt":"Which line creates an object of this class?","code":"class Quiz {\n    int questions = 3;\n}","options":["Quiz round = Quiz;","new Quiz = round();","Quiz round = new Quiz();"],"answer":2,"explanation":"new Quiz() calls the constructor and creates an instance. The variable round has type Quiz and refers to that instance."},
+        {"id":"java-division","skill":"Operators","prompt":"A quiz has 7 questions. What does this integer division print?","code":"int questions = 7;\nint perRound = questions / 2;\nSystem.out.println(perRound);","options":["3.5","3","4"],"answer":1,"explanation":"Both operands are integers, so Java performs integer division. The fractional part is discarded, leaving 3."},
+        {"id":"java-array","skill":"Arrays","prompt":"What value is printed after this array update?","code":"int[] scores = {2, 4, 6};\nscores[1] = scores[0] + 5;\nSystem.out.println(scores[1]);","options":["7","9","4"],"answer":0,"explanation":"Arrays use zero-based indexes. scores[0] is 2, so the new value at index 1 is 2 + 5 = 7."},
+        {"id":"java-branch","skill":"Conditions","prompt":"A learner needs at least 4 points. What is printed for this boundary value?","code":"int score = 4;\nif (score >= 4) {\n    System.out.println(\"Pass\");\n} else {\n    System.out.println(\"Try again\");\n}","options":["Try again","Nothing","Pass"],"answer":2,"explanation":"The >= operator includes equality. Since 4 >= 4 is true, the first branch prints Pass."}
+      ]
+    },
+    {
+      "id": "python", "title": "Python essentials", "language": "Python", "category": "python", "description": "Follow Python lists, functions and loops through short examples.",
+      "questions": [
+        {"id":"python-list","skill":"Lists","prompt":"Which value does this list access print?","code":"scores = [2, 4, 6]\nprint(scores[1])","options":["4","2","6"],"answer":0,"explanation":"List indexes start at zero. Index 1 refers to the second element, which is 4."},
+        {"id":"python-pass","skill":"Functions","prompt":"A learner needs at least 2 points to pass. What is printed?","code":"def passed(score):\n    return score >= 2\n\nprint(passed(2))","options":["False","True","None"],"answer":1,"explanation":"2 >= 2 is true. The function returns that Boolean value, and Python prints it as True."},
+        {"id":"python-sum","skill":"Loops","prompt":"What total is printed after this loop finishes?","code":"total = 0\nfor value in [1, 2, 3]:\n    total += value\nprint(total)","options":["3","0","6"],"answer":2,"explanation":"The loop adds 1, then 2, then 3 to total. The final sum is 6."},
+        {"id":"python-range","skill":"Ranges","prompt":"How many times does this loop print the word Practice?","code":"for round_number in range(1, 4):\n    print(\"Practice\")","options":["4 times","2 times","3 times"],"answer":2,"explanation":"range(1, 4) produces 1, 2 and 3. The stop value 4 is excluded, so the loop runs three times."},
+        {"id":"python-append","skill":"List methods","prompt":"What does this print after the new score is appended?","code":"scores = [3, 5]\nscores.append(7)\nprint(len(scores))","options":["3","15","7"],"answer":0,"explanation":"append adds one element to the end of the list. len counts elements, so the result is 3."},
+        {"id":"python-dictionary","skill":"Dictionaries","prompt":"Which value is printed after updating this learner record?","code":"learner = {\"name\": \"Ali\", \"score\": 2}\nlearner[\"score\"] += 1\nprint(learner[\"score\"])","options":["2","3","score"],"answer":1,"explanation":"The score key initially holds 2. Adding 1 updates that value to 3; reading the same key returns 3."}
+      ]
+    },
+    {
+      "id": "htmlcss", "title": "HTML & CSS", "language": "HTML & CSS", "category": "web", "description": "Connect HTML structure and CSS rules to the interface they produce.",
+      "questions": [
+        {"id":"web-submit","skill":"Forms","prompt":"Which button type submits this form when clicked?","code":"<form>\n  <button type=\"submit\">Check answers</button>\n</form>","options":["submit","button","reset"],"answer":0,"explanation":"A button with type=\"submit\" submits its associated form. type=\"button\" has no default submit action; reset resets the form fields."},
+        {"id":"web-selector","skill":"Selectors","prompt":"Which selector targets the element with id=\"selected\"?","code":".topic { color: green; }\n#selected { font-weight: 600; }","options":[".selected","#selected","selected"],"answer":1,"explanation":"# selects an id. A dot selects a class, while a bare word selects elements by tag name."},
+        {"id":"web-grid","skill":"Responsive design","prompt":"Assume .quiz-list is a CSS grid. What does this rule do on a narrow screen?","code":"@media (max-width: 575.98px) {\n  .quiz-list { grid-template-columns: 1fr; }\n}","options":["Hide every card","One card per row","Three cards per row"],"answer":1,"explanation":"At viewport widths of 575.98px or less, 1fr defines one grid column. Cards therefore stack in a single column."},
+        {"id":"web-label","skill":"Accessibility","prompt":"Which change connects the label to this input?","code":"<label for=\"learner-name\">Your name</label>\n<input type=\"text\" name=\"name\">","options":["Add class=\"learner-name\"","Add placeholder=\"learner-name\"","Add id=\"learner-name\""],"answer":2,"explanation":"A label's for attribute must match the input's id. This association gives the input an accessible name and lets clicking the label focus it."},
+        {"id":"web-box","skill":"Box model","prompt":"What is this card's total rendered width, including padding and borders?","code":".card {\n  box-sizing: border-box;\n  width: 200px;\n  padding: 20px;\n  border: 2px solid green;\n}","options":["244px","200px","240px"],"answer":1,"explanation":"With border-box, the declared width already includes content, padding and borders. The outer width stays 200px (excluding margins)."},
+        {"id":"web-cascade","skill":"Cascade","prompt":"What color is the text in this paragraph?","code":"<p class=\"note\" id=\"result\">Well done</p>\n\n<style>\n  .note { color: blue; }\n  #result { color: green; }\n</style>","options":["Green","Blue","The browser ignores both rules"],"answer":0,"explanation":"Both rules match, but the id selector has greater specificity than the class selector. The text is green."}
+      ]
+    }
+  ]
+}

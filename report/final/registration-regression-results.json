@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-11-13T05:56:10.903Z",
+  "base": "http://127.0.0.1:4173/",
+  "browser": "157.0.8103.39",
+  "passed": [
+    "Typing and correcting a password keeps registration open on the same page",
+    "A backdrop click does not dismiss a registration form with entered details",
+    "An unrelated account registration in another tab does not reload or erase an open form",
+    "Create account shows explicit success without switching tabs or navigating; Continue opens Log in",
+    "Actual sign-out in a second tab switches account state only once and keeps the saved study plan"
+  ],
+  "errors": []
+}

@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-11-13T05:54:14.778Z",
+  "passed": [
+    "A mixed 5/6 result retries exactly its one missed question and records a distinct 1/1 practice result",
+    "A storage quota failure retains the new result in page memory and visibly reports the persistence limit",
+    "Fully denied localStorage still supports navigation, draft resume, scoring, history and clearing within the page",
+    "A newly saved result refreshes the history in a second tab"
+  ],
+  "errors": [],
+  "browser": "157.0.8103.39"
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CodeQuiz Final Project · Team Spirit · SE 2508 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#202d24">
+    <link rel="icon" type="image/svg+xml" href="images/brand/favicon.svg">
+    <title>CodeQuiz - Home</title>
+
+    <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/study.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/final.css">
+    <script src="vendor/jquery/jquery-4.0.0.min.js"></script>
+</head>
+
+<body data-theme="forest" class="catalog-page">
+    <div class="scroll-track"><div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+
+<svg class="icon-definitions" aria-hidden="true"><defs>
+<symbol id="icon-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="icon-book" viewBox="0 0 24 24"><path d="M12 5v16M12 5C8 2 4 4 3 4v15c4-1 7 0 9 2 2-2 5-3 9-2V4c-4-1-7-1-9 1Z"/></symbol>
+<symbol id="icon-plan" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4m8-4v4M8 11h8m-8 4h5"/></symbol>
+<symbol id="icon-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2m2-15a3 3 0 0 1 0 6m4 9v-2a6 6 0 0 0-3-5"/></symbol>
+<symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+</defs></svg>
+    <header id="main-header" class="platform-sidebar">
+        <nav class="navbar navbar-expand-lg navbar-dark site-navbar bg-dark p-0" aria-label="Main navigation">
+            <div class="sidebar-brand-row px-3 px-lg-4 py-3 py-lg-4">
+                <a class="navbar-brand codequiz-brand m-0" href="index.html" aria-label="CodeQuiz home"><img class="codequiz-brand-symbol" src="images/brand/codequiz-mark-light.svg" width="28" height="21" alt="" aria-hidden="true"><img class="codequiz-brand-wordmark" src="images/brand/codequiz-wordmark-light.svg" width="125" height="20" alt="CodeQuiz"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            </div>
+            <div class="collapse navbar-collapse px-3 px-lg-4" id="mainNavigation">
+                <p class="nav-caption mt-4 mb-3 px-2">Navigation</p>
+                <ul class="navbar-nav w-100 gap-2"><li class="nav-item"><a class="nav-link px-3 py-2 active" aria-current="page" href="index.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-grid"></use></svg>Overview</a></li>
+<li class="nav-item"><a class="nav-link px-3 py-2" href="quiz.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-book"></use></svg>Quizzes</a></li>
+<li class="nav-item"><a class="nav-link px-3 py-2" href="study.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-plan"></use></svg>Study Lab</a></li>
+<li class="nav-item"><a class="nav-link px-3 py-2" href="about.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-team"></use></svg>About us</a></li>
+<li class="nav-item"><a class="nav-link px-3 py-2" href="contact.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>Contacts</a></li>
+<li class="nav-item"><a class="nav-link px-3 py-2" href="profile.html"><svg class="platform-icon" aria-hidden="true"><use href="#icon-team"></use></svg>Profile</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sidebar-meta mt-auto mx-4 pt-3 pb-4"><strong>Team Spirit</strong><span>SE 2508 · Web Technologies</span></div>
+    </header>
+    <div class="platform-topbar px-0 px-lg-4 px-xl-5">
+        <p class="page-location m-0">Workspace <span class="mx-2">/</span> <strong>Overview</strong></p>
+        <div class="topbar-actions d-flex align-items-center gap-2 gap-sm-3">
+            <time id="current-date-time" class="date-badge">Loading current date and time…</time>
+            <div class="btn-group theme-control" role="group" aria-label="Color theme">
+                <button id="btn-change-bg" type="button" role="switch" aria-checked="false" class="btn theme-cycle px-2 px-sm-3" title="Switch color theme"><span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span><span id="theme-name">Light</span></button>
+                
+            </div>
+            <button type="button" class="btn signup-button px-2 px-sm-3 trigger-modal-btn" data-modal-tab="register">Sign up</button>
+        </div>
+    </div>
+
+    <main class="container platform-main px-3 px-sm-4 px-xl-5 py-4">
+<section class="platform-intro d-flex justify-content-between align-items-center gap-3 mb-4">
+    <div><h1>Programming quizzes</h1><p class="text-secondary mt-2 mb-0">Choose a topic, answer six questions and review your result.</p></div>
+    <div class="catalog-totals d-flex gap-4" aria-label="Quiz totals"><div><strong class="number-counter" data-count="3">3</strong><span>topics</span></div><div><strong class="number-counter" data-count="18" data-bank-total>18</strong><span>questions</span></div></div>
+</section>
+<div class="library-layout"><section id="practice-library" class="catalog-library" aria-labelledby="library-heading">
+            <div class="lab-section-heading mb-3">
+                <h2 id="library-heading">Available quizzes</h2>
+                <p id="topic-count" class="text-secondary mb-0" role="status"></p>
+            </div>
+            <div class="topic-search mb-3">
+                <label class="visually-hidden" for="topic-search">Search practice topics</label>
+                <input id="topic-search" type="search" class="form-control" placeholder="Search quizzes by topic…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="topic-suggestions" aria-expanded="false">
+                <ul id="topic-suggestions" class="list-group" role="listbox" aria-label="Search suggestions" hidden></ul>
+            </div>
+            <div class="topic-filters mb-3" role="group" aria-label="Filter practice topics">
+                <button type="button" class="topic-filter active btn btn-outline-primary px-2 px-sm-3 py-2" data-category="all" aria-pressed="true">All topics</button>
+                <button type="button" class="topic-filter btn btn-outline-primary px-2 px-sm-3 py-2" data-category="java" aria-pressed="false">Java</button>
+                <button type="button" class="topic-filter btn btn-outline-primary px-2 px-sm-3 py-2" data-category="python" aria-pressed="false">Python</button>
+                <button type="button" class="topic-filter btn btn-outline-primary px-2 px-sm-3 py-2" data-category="web" aria-pressed="false">HTML &amp; CSS</button>
+            </div>
+            <div id="practice-topics" class="row g-3"></div>
+        </section><aside class="howto-panel p-3 p-xl-4" aria-labelledby="howto-heading"><h2 id="howto-heading">How it works</h2><ol class="list-unstyled d-flex flex-column gap-4 mt-4 mb-0"><li><span>1</span><div><strong>Choose a topic</strong><p class="mb-0 mt-1">Start with what you know.</p></div></li><li><span>2</span><div><strong>Answer 6 questions</strong><p class="mb-0 mt-1">One answer per question.</p></div></li><li><span>3</span><div><strong>Review your result</strong><p class="mb-0 mt-1">See what to practise next.</p></div></li></ol><a href="study.html#practice-planner" class="howto-plan d-block mt-4 pt-3">Build a practice plan →</a></aside></div>
+<section id="practice-overview" class="practice-overview p-3 p-sm-4 mt-4" aria-labelledby="progress-heading">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3"><h2 id="progress-heading" class="mb-0">Your practice</h2><a href="quiz.html#history" class="btn btn-outline-secondary btn-sm">View results</a></div>
+        <div class="d-flex flex-wrap gap-4"><div class="practice-stat"><strong id="practice-attempts" class="d-block">0</strong><span>completed attempts</span></div><div class="practice-stat"><strong id="practice-average" class="d-block">—</strong><span>full-quiz average</span></div><div class="practice-stat"><strong id="practice-best" class="d-block">—</strong><span>best full-quiz score</span></div></div>
+        <p id="practice-recent" class="practice-recent mt-3 mb-0">Complete a quiz to see your progress here.</p>
+    </section>
+<details class="platform-resources mt-4 pt-3"><summary>Resources &amp; FAQ</summary><div class="resource-content mt-4"><section class="mb-4">
+            <h2>Topic reference</h2>
+            <div class="quiz-container">
+                <div class="quiz-card p-3">
+                    <h3>Java Quiz</h3>
+                    <p>Test your basic Java knowledge: syntax, methods, and OOP concepts.</p>
+                    <a class="btn btn-primary mt-2" href="quiz.html#java">Start Quiz</a>
+                </div>
+
+                <div class="quiz-card p-3">
+                    <h3>Python Quiz</h3>
+                    <p>Test your basic Python knowledge: functions, indentation, and logic.</p>
+                    <a class="btn btn-primary mt-2" href="quiz.html#python">Start Quiz</a>
+                </div>
+
+                <div class="quiz-card p-3">
+                    <h3>HTML &amp; CSS Quiz</h3>
+                    <p>Test your basic web development knowledge: tags, CSS styling, and structure.</p>
+                    <a class="btn btn-primary mt-2" href="quiz.html#htmlcss">Start Quiz</a>
+                </div>
+            </div>
+        </section>
+<section class="mb-5" aria-labelledby="grid-heading">
+            <h2 id="grid-heading">Explore CodeQuiz</h2>
+            <div class="row g-3 mt-lg-2">
+                <div class="col-12 col-lg-6">
+                    <article class="feature-panel h-100 p-3 p-sm-4">
+                        <h3>Practice programming</h3>
+                        <p>Build confidence with short questions covering practical programming fundamentals.</p>
+                        <a class="btn btn-outline-primary btn-sm" href="quiz.html">Browse quizzes</a>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <article class="feature-panel h-100 p-3 p-sm-4">
+                        <h3>Meet the team</h3>
+                        <p>Learn about the developers and how we created the CodeQuiz project.</p>
+                        <a class="btn btn-secondary btn-sm" href="about.html">About us</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+<section class="mb-5" aria-labelledby="topics-heading">
+            <h2 id="topics-heading">Featured Topics</h2>
+            <div class="card-group row g-3 mt-lg-2" aria-label="Featured topics">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1555066931-4365d14bab8c.jpg" class="lazy-image card-img-top topic-image" alt="Java code on a computer screen">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Java foundations</h3>
+                            <p class="card-text">Review classes, methods, and the building blocks of Java.</p>
+                            <a class="btn btn-primary" href="quiz.html#java">Open Java quiz</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1515879218367-8466d910aaa4.jpg" class="lazy-image card-img-top topic-image" alt="Python code displayed on a screen">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Python essentials</h3>
+                            <p class="card-text">Check your knowledge of functions, syntax, and Python basics.</p>
+                            <a class="btn btn-primary" href="quiz.html#python">Open Python quiz</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1498050108023-c5249f4df085.jpg" class="lazy-image card-img-top topic-image" alt="Web development workspace with code on screen">
+                        <div class="card-body">
+                            <h3 class="card-title h5">HTML &amp; CSS</h3>
+                            <p class="card-text">Explore the structure and styling behind modern web pages.</p>
+                            <a class="btn btn-primary" href="quiz.html#htmlcss">Open web quiz</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+<section class="mb-5" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Programming in Pictures</h2>
+            <div id="codeQuizCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Programming image carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="4" aria-label="Image 5"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="5" aria-label="Image 6"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="6" aria-label="Image 7"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="7" aria-label="Image 8"></button>
+                    <button type="button" data-bs-target="#codeQuizCarousel" data-bs-slide-to="8" aria-label="Image 9"></button>
+                </div>
+                <div class="carousel-inner rounded-2">
+                    <div class="carousel-item active">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1519389950473-47ba0277781c.jpg" class="lazy-image d-block w-100 gallery-image" alt="Developers working together">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1498050108023-c5249f4df085.jpg" class="lazy-image d-block w-100 gallery-image" alt="Laptop with a code editor">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1516321318423-f06f85e504b3.jpg" class="lazy-image d-block w-100 gallery-image" alt="Team collaborating around a laptop">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1518770660439-4636190af475.jpg" class="lazy-image d-block w-100 gallery-image" alt="Computer hardware and technology">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1522071820081-009f0129c71c.jpg" class="lazy-image d-block w-100 gallery-image" alt="People working as a team">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1515879218367-8466d910aaa4.jpg" class="lazy-image d-block w-100 gallery-image" alt="Programming code on a monitor">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1555066931-4365d14bab8c.jpg" class="lazy-image d-block w-100 gallery-image" alt="Code displayed on a laptop">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1556761175-b413da4baf72.jpg" class="lazy-image d-block w-100 gallery-image" alt="Team planning a software project">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/assets/photo-1521737711867-e3b97375f902.jpg" class="lazy-image d-block w-100 gallery-image" alt="A team sharing ideas around a table">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#codeQuizCarousel" data-bs-slide="prev" aria-label="Previous images"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#codeQuizCarousel" data-bs-slide="next" aria-label="Next images"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+            </div>
+        </section>
+<section class="mb-5" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="mb-3">Frequently Asked Questions (FAQ)</h2>
+            <div class="custom-accordion">
+                <div class="custom-accordion-item">
+                    <button type="button" class="custom-accordion-header btn btn-light px-3 py-3 rounded-0 gap-3" id="faq-question-1" aria-controls="faq-answer-1" aria-expanded="false">
+                        <span>What is CodeQuiz and who is it designed for?</span>
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="custom-accordion-content px-3" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true" inert>
+                        <p class="mb-0 pb-3">CodeQuiz is an interactive web platform designed for computer science students and beginner developers who want to test and reinforce their knowledge in core programming languages like Java, Python, and Web Technologies.</p>
+                    </div>
+                </div>
+
+                <div class="custom-accordion-item">
+                    <button type="button" class="custom-accordion-header btn btn-light px-3 py-3 rounded-0 gap-3" id="faq-question-2" aria-controls="faq-answer-2" aria-expanded="false">
+                        <span>Are the quizzes completely free to take?</span>
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="custom-accordion-content px-3" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true" inert>
+                        <p class="mb-0 pb-3">Yes, all quizzes on CodeQuiz are 100% free and accessible without any subscription fees. You can take them anytime directly in your browser.</p>
+                    </div>
+                </div>
+
+                <div class="custom-accordion-item">
+                    <button type="button" class="custom-accordion-header btn btn-light px-3 py-3 rounded-0 gap-3" id="faq-question-3" aria-controls="faq-answer-3" aria-expanded="false">
+                        <span>Can I retake a quiz if I want to improve my score?</span>
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="custom-accordion-content px-3" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true" inert>
+                        <p class="mb-0 pb-3">Absolutely! You can retake any quiz as many times as you like. The interactive system recalculates your score and provides instant feedback on correct and incorrect answers.</p>
+                    </div>
+                </div>
+
+                <div class="custom-accordion-item">
+                    <button type="button" class="custom-accordion-header btn btn-light px-3 py-3 rounded-0 gap-3" id="faq-question-4" aria-controls="faq-answer-4" aria-expanded="false">
+                        <span>Which programming languages will be added next?</span>
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="custom-accordion-content px-3" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" aria-hidden="true" inert>
+                        <p class="mb-0 pb-3">This version focuses on Java, Python and HTML &amp; CSS. Each topic has six code-reading questions with answer explanations. Future topics can be added as the course project grows.</p>
+                    </div>
+                </div>
+
+                <div class="custom-accordion-item">
+                    <button type="button" class="custom-accordion-header btn btn-light px-3 py-3 rounded-0 gap-3" id="faq-question-5" aria-controls="faq-answer-5" aria-expanded="false">
+                        <span>Do I need an account to save my results?</span>
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="custom-accordion-content px-3" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" aria-hidden="true" inert>
+                        <p class="mb-0 pb-3">You can practise as a guest. Sign up and log in to keep your results and study plan under your own local account. Your profile shows your saved name, email, phone and practice progress. Accounts and results stay on this browser.</p>
+                    </div>
+                </div>
+            </div>
+        </section></div></details>
+</main>
+
+    <div id="account-dialog-root"></div>
+
+    <footer class="site-footer px-3 px-sm-4 px-xl-5 py-3"><span>CodeQuiz · Team Spirit · SE 2508</span><span>Darkhan Saduakasov &amp; Kassymkhan</span></footer>
+
+    <div id="action-toast" class="action-toast px-3 py-2" role="status" aria-live="polite" hidden></div>
+
+    <noscript><p class="container alert alert-warning">Enable JavaScript to use forms, quizzes, your account, forms and theme controls.</p></noscript>
+
+    <!-- Bootstrap 5 & Custom JavaScript (bundled locally for offline use) -->
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/study.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/overview.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-11-13T05:54:00.246Z",
+  "base": "http://127.0.0.1:4173/",
+  "browser": "157.0.8103.39",
+  "passed": [
+    "Local API returns the curated 18-question bank and all pages initialize offline jQuery",
+    "Loading, HTTP error, Retry, malformed JSON and static-host fallback are real request paths",
+    "Failed network uses the saved bank and corrupted browser JSON never crashes initialization",
+    "Question navigation, review flags, incomplete submission and exact draft restoration work",
+    "Every topic scores six correct answers, renders explanations and saves one result per submit",
+    "Wrong-answer explanations and missed-question practice use the correct answer identities",
+    "Results survive reload, history review works, Overview calculates real scores and clear is scoped",
+    "Practice plan persists safely across pages, edits and Reset removes the saved plan",
+    "Existing search, literal highlighting, category filters, FAQ and themes remain functional",
+    "Registration/contact validation, phone, spinner and saved feedback remain correct",
+    "All six pages fit 320/360/390/768/992/1440px; mobile quiz navigation and results remain reachable",
+    "History clearing leaves other local data intact and no JavaScript runtime errors occurred"
+  ],
+  "errors": []
+}

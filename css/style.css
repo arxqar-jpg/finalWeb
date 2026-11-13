@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #20232a;
+    --paper: #edf4f8;
+    --accent: #087f8c;
+    --accent-hover: #066570;
+    --line: #d7dde2;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--paper);
+    background-image: linear-gradient(rgba(8, 127, 140, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 127, 140, 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Header & Navbar Components
+   ========================================================================== */
+.top-bar-info {
+    background-color: #17191e;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar-info .date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 500;
+}
+
+.site-navbar {
+    background-color: var(--ink);
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus {
+    color: #8ce1e8;
+}
+
+main {
+    min-height: 60vh;
+}
+
+.welcome {
+    border-bottom: 2px solid var(--accent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(228, 246, 248, 0.8));
+    border-radius: 12px 12px 0 0;
+}
+
+.round-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.quiz-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.quiz-card {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-image {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table th,
+table td {
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+table th {
+    background-color: var(--ink);
+    color: white;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+}
+
+.profile {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.quiz-section {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.quiz-section label {
+    display: block;
+    font-weight: normal;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quiz-section label:hover {
+    background-color: #f1f5f9;
+}
+
+.about-hero,
+.feature-panel,
+.skills-list,
+.project-steps,
+.contact-section {
+    background-color: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.contact-section h1 {
+    text-align: center;
+}
+
+.contact-section > p {
+    text-align: center;
+}
+
+.contact-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+#contact-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.site-footer {
+    background-color: var(--ink);
+    color: white;
+    text-align: center;
+}
+
+.topic-image,
+.team-image {
+    height: 190px;
+    object-fit: cover;
+}
+
+.gallery-image {
+    height: 280px;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   TASK 2: Custom FAQ Accordion Styles
+   ========================================================================== */
+.custom-accordion {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.custom-accordion-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.custom-accordion-item:last-child {
+    border-bottom: none;
+}
+
+.custom-accordion-header {
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.custom-accordion-header:hover {
+    background-color: #f8fafc;
+    color: var(--accent);
+}
+
+.accordion-icon {
+    transition: transform 0.3s ease;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.custom-accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+.custom-accordion-item.active .custom-accordion-header {
+    background-color: #f0fdf9;
+    color: var(--accent);
+}
+
+.custom-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TASK 3: Custom Popup Modal & Overlay Styles
+   ========================================================================== */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.custom-modal-card {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: translateY(-20px) scale(0.96);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-modal-overlay.active .custom-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+.modal-header-custom {
+    background-color: var(--ink);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-body-custom {
+    overflow-y: auto;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: #ef4444;
+}
+
+.modal-tabs {
+    display: flex;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.modal-tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #64748b;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.modal-tab-content {
+    display: none;
+}
+
+.modal-tab-content.active {
+    display: block;
+    animation: fadeInTab 0.3s ease;
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   TASK 1: Form Validation & Error Feedback Styles
+   ========================================================================== */
+.error-msg {
+    color: #dc3545;
+    font-size: 0.825rem;
+    display: none;
+    font-weight: 500;
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #198754;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Assignment #4 usability: readable feedback and keyboard/mobile access. */
+.modal-open { overflow: hidden; }
+.demo-note { color: #546475; font-size: 0.85rem; }
+.btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-hover); --bs-btn-hover-border-color: var(--accent-hover); --bs-btn-active-bg: var(--accent-hover); --bs-btn-active-border-color: var(--accent-hover); }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #086eac; outline-offset: 3px; }
+[hidden] { display: none !important; }
+.custom-accordion-header { gap: 1rem; }
+.date-badge { font-variant-numeric: tabular-nums; }
+.team-roles-table table { min-width: 620px; }
+.quiz-section code { color: #7b3494; }
+.error-msg, .invalid-feedback { overflow-wrap: anywhere; }
+@media (max-width: 575.98px) {
+    .welcome .d-flex { flex-wrap: wrap; }
+    .custom-modal-card { max-height: calc(100dvh - 1rem); }
+    .top-bar-info > .container { justify-content: center !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 768px) {
+    .contact-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .top-bar-info {
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    .quiz-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .quiz-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-image {
+        height: 220px;
+    }
+}
+
+/* Three typography sizes for Assignment 3, including Bootstrap lead paragraphs. */
+main p { font-size: 1.05rem; }
+main p.lead { font-size: 1.25rem; }
+@media (min-width: 576px) and (max-width: 991.98px) {
+    main p { font-size: 1rem; }
+    main p.lead { font-size: 1.15rem; }
+}
+@media (max-width: 575.98px) {
+    main p { font-size: 0.95rem; }
+    main p.lead { font-size: 1.05rem; }
+}

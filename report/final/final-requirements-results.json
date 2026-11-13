@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-11-13T05:55:45.544Z",
+  "base": "http://127.0.0.1:4173/",
+  "browser": "157.0.8103.39",
+  "passed": [
+    "Six connected pages have unique IDs, valid assets and JavaScript-only forms",
+    "Validation rejects malformed email, weak passwords and invalid international phone numbers",
+    "Sign up stores name/email/password/phone, then login rejects wrong credentials and opens Profile",
+    "Logged-in quiz progress is visible on Profile and isolated from another account",
+    "Duplicate email cannot overwrite an existing account",
+    "Saved search/filter and contact feedback survive page reloads",
+    "Dark switch persists across all six pages and dark text contrast is improved",
+    "GitHub public API loads real Java/Python/web resources in the browser",
+    "API loading, HTTP failure, Retry, malformed JSON and cache fallback have visible states",
+    "Shared modal has keyboard focus containment, tab navigation and accessible Escape close",
+    "Study gallery photos load on scroll, thumbnail controls work and Copy plan uses the generated plan",
+    "Mobile account forms, Profile, API cards and navigation fit 320–768px in both modes",
+    "Denied storage prevents a false account success and displays an inline error",
+    "Static hosting works under a repository subpath without missing local assets or a Node API route"
+  ],
+  "errors": []
+}
