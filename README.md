@@ -42,7 +42,7 @@ Feedback is saved on the current browser, not sent to a server or by email. The 
 - The Light/Dark switch is keyboard accessible and uses localStorage across all pages.
 - Search updates cards immediately, supports category filters and suggestions, and restores the saved search/filter after navigation or reload.
 - Study Lab uses the **GitHub public REST API** to retrieve current descriptions, star counts and code-update dates for TheAlgorithms/Java, TheAlgorithms/Python and freeCodeCamp/freeCodeCamp. The cards link to the matching learning resources.
-- Public API requests use Fetch and async/await, response checks, data validation and a 10-second timeout. A 30-minute browser cache reduces public rate-limit usage. Errors offer Retry; a saved response is identified when used offline.
+- Public API requests use Fetch and async/await, response checks, data validation and a 10-second timeout. A shared 30-minute browser cache reduces public rate-limit usage. Requests run in sequence and honor GitHub's rate-limit reset / Retry-After headers, including after reload. Errors offer Retry; a saved response is identified when used offline. Without a saved response, the same learning links and short descriptions remain available, with a visible error and no invented live statistics.
 - The quiz bank is a separate curated local JSON source; it is not presented as the external API integration.
 
 API documentation: https://docs.github.com/en/rest/repos/repos#get-a-repository

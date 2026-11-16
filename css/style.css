@@ -11,14 +11,18 @@
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background-color: var(--paper);
-    background-image: linear-gradient(rgba(8, 127, 140, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 127, 140, 0.025) 1px, transparent 1px);
+    background-image:
+        linear-gradient(rgba(8, 127, 140, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8, 127, 140, 0.025) 1px, transparent 1px);
     background-size: 32px 32px;
     color: var(--ink);
     font-size: 16px;
     line-height: 1.5;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
 }
 
 h1 {
@@ -100,7 +104,9 @@ main {
     border: 1px solid var(--line);
     border-top: 3px solid var(--accent);
     border-radius: 6px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .quiz-card:hover {
@@ -241,7 +247,9 @@ table tr:hover {
     color: var(--ink);
     text-align: left;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .custom-accordion-header:hover {
@@ -336,7 +344,9 @@ table tr:hover {
     line-height: 1;
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
 }
 
 .modal-close-btn:hover {
@@ -377,8 +387,14 @@ table tr:hover {
 }
 
 @keyframes fadeInTab {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==========================================================================
@@ -410,23 +426,67 @@ table tr:hover {
 }
 
 /* Assignment #4 usability: readable feedback and keyboard/mobile access. */
-.modal-open { overflow: hidden; }
-.demo-note { color: #546475; font-size: 0.85rem; }
-.btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-hover); --bs-btn-hover-border-color: var(--accent-hover); --bs-btn-active-bg: var(--accent-hover); --bs-btn-active-border-color: var(--accent-hover); }
-button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #086eac; outline-offset: 3px; }
-[hidden] { display: none !important; }
-.custom-accordion-header { gap: 1rem; }
-.date-badge { font-variant-numeric: tabular-nums; }
-.team-roles-table table { min-width: 620px; }
-.quiz-section code { color: #7b3494; }
-.error-msg, .invalid-feedback { overflow-wrap: anywhere; }
+.modal-open {
+    overflow: hidden;
+}
+.demo-note {
+    color: #546475;
+    font-size: 0.85rem;
+}
+.btn-primary {
+    --bs-btn-bg: var(--accent);
+    --bs-btn-border-color: var(--accent);
+    --bs-btn-hover-bg: var(--accent-hover);
+    --bs-btn-hover-border-color: var(--accent-hover);
+    --bs-btn-active-bg: var(--accent-hover);
+    --bs-btn-active-border-color: var(--accent-hover);
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #086eac;
+    outline-offset: 3px;
+}
+[hidden] {
+    display: none !important;
+}
+.custom-accordion-header {
+    gap: 1rem;
+}
+.date-badge {
+    font-variant-numeric: tabular-nums;
+}
+.team-roles-table table {
+    min-width: 620px;
+}
+.quiz-section code {
+    color: #7b3494;
+}
+.error-msg,
+.invalid-feedback {
+    overflow-wrap: anywhere;
+}
 @media (max-width: 575.98px) {
-    .welcome .d-flex { flex-wrap: wrap; }
-    .custom-modal-card { max-height: calc(100dvh - 1rem); }
-    .top-bar-info > .container { justify-content: center !important; }
+    .welcome .d-flex {
+        flex-wrap: wrap;
+    }
+    .custom-modal-card {
+        max-height: calc(100dvh - 1rem);
+    }
+    .top-bar-info > .container {
+        justify-content: center !important;
+    }
 }
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* ==========================================================================
@@ -481,13 +541,25 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* Three typography sizes for Assignment 3, including Bootstrap lead paragraphs. */
-main p { font-size: 1.05rem; }
-main p.lead { font-size: 1.25rem; }
+main p {
+    font-size: 1.05rem;
+}
+main p.lead {
+    font-size: 1.25rem;
+}
 @media (min-width: 576px) and (max-width: 991.98px) {
-    main p { font-size: 1rem; }
-    main p.lead { font-size: 1.15rem; }
+    main p {
+        font-size: 1rem;
+    }
+    main p.lead {
+        font-size: 1.15rem;
+    }
 }
 @media (max-width: 575.98px) {
-    main p { font-size: 0.95rem; }
-    main p.lead { font-size: 1.05rem; }
+    main p {
+        font-size: 0.95rem;
+    }
+    main p.lead {
+        font-size: 1.05rem;
+    }
 }

@@ -1,19 +1,27 @@
-# Final verification — 13 November 2026
+# Final verification — 16 November 2026
 
-`npm run check` and the complete `npm test` command passed on the final source.
+`npm run check` and all six browser test suites passed on the polished source in Google Chrome 157, using isolated test contexts.
 
-- 12 core browser groups: quizzes, all-topic answer keys, review/missed practice, drafts/history, planner, forms, search, themes, mobile layout and error recovery.
-- 4 storage edge groups: mixed-score retries, quota failure, denied localStorage and cross-tab updates.
-- 14 final requirement groups: six-page navigation, JS-only validation, registration/login/Profile/logout, duplicate email, account isolation, saved search/feedback, theme persistence and contrast, real GitHub API, loading/errors/retry/cache/malformed responses, keyboard modal controls, gallery/Copy plan, mobile forms and static repository-subpath hosting.
-- 5 registration regression groups: password entry, backdrop clicks, unrelated cross-tab registration, explicit success/Continue and cross-tab logout with the saved plan preserved.
-- 3 submission regression groups: contact fields reflect local feedback behavior, planner reports denied persistence, and Reset shows an accurate empty state.
-- Total: **38 passed groups**, with no recorded JavaScript runtime errors.
-- Six pages checked at 320, 360, 390, 768, 992 and 1440 px; additional mobile account/API checks in both themes.
-- Local HTML/CSS assets checked; no missing references found. Study gallery images load when scrolled into view.
-- Runtime forms, including the shared account dialog, checked for novalidate and absence of the prohibited native validation attributes.
+| Suite | Passed groups |
+|---|---:|
+| Core quizzes, drafts/history, planner, search, forms, themes and layouts | 12 |
+| Storage quota/denial and cross-tab edge cases | 4 |
+| Final rubric requirements, accounts/Profile, real API and static hosting | 14 |
+| Registration and cross-tab account regression | 5 |
+| Contact/planner persistence regression | 3 |
+| Contrast, mobile header, API fallback and rate-limit regression | 6 |
+| **Total** | **44** |
 
-Browser: Google Chrome 157, isolated test contexts. Public API success used real GitHub requests; network and malformed-response cases were deliberately simulated. Static-host compatibility used a simulated HTTPS repository subpath, not a claim of public deployment.
+No JavaScript runtime errors were recorded in these suites. All six pages fit 320, 360, 390, 768, 992 and 1440 px in both themes. The new checks also verify that the logo, theme switch, account button and mobile menu do not overlap, and that the footer remains at least 12px.
 
-Screenshots were visually inspected locally. They are omitted from the clean submission ZIP; running tests regenerates them. JSON results are included here. No test accounts are seeded into the user's actual browser.
+Selected quiz topics and the hovered account button meet 4.5:1 text contrast in both themes. Light-mode secondary text is darker; dark-mode selected topics use dark text on the light accent background. CSS source files are consistently formatted.
 
-Physical phones, Safari and Firefox were not separately tested. The actual final online publication remains required before submission, and presentation marks depend on the team's live defense. See DEPLOYMENT.md and PRESENTATION-KZ.md.
+The final requirement suite successfully loaded real GitHub public API data. Failure, Retry, malformed data, stale-cache, HTTP 403/429 and rate-limit-reset cases use explicit intercepted test responses. The polish suite uses fixtures for deterministic recovery checks; it is not evidence of a separate real API request.
+
+During a cold-cache API failure, all three original resource links remain available with short descriptions and an inline error. Live star counts and dates are only shown for validated API/cache responses. Rate-limit reset and Retry-After are respected across Refresh and reload; requests recover after the wait expires. Resource requests are sequential so the first rate-limit response prevents further unnecessary calls.
+
+Images, branding, audio assets, quiz questions, scoring, authentication and profile logic were preserved. Runtime forms still use JavaScript validation with `novalidate`, and static repository-subpath hosting is covered by the existing test suite.
+
+JSON test results are included in this directory. Screenshots are generated locally and ignored by Git. `source-hashes.json` uses SHA-256 with CRLF normalized to LF for text files, so hashes remain portable between Windows and Git archives; binary files are hashed unchanged.
+
+The local preview used `http://127.0.0.1:4189/`. Physical phones, Safari and Firefox were not separately tested. Public deployment is verified separately after pushing. Presentation marks depend on the team's live defense.

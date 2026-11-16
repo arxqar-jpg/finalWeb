@@ -143,7 +143,8 @@ async function test(name, fn) { await fn(); passed.push(name); console.log('PASS
             await go('study.html'); assert.equal(await p.locator('#learning-resources').getAttribute('aria-busy'), 'true');
             assert.ok(await p.locator('#refresh-resources').isDisabled()); assert.match(await p.locator('#resource-status').innerText(), /Loading/); release();
             await p.waitForFunction(() => !document.getElementById('refresh-resources').disabled);
-            assert.match(await p.locator('#resource-status').innerText(), /could not load/); assert.equal(await p.locator('.resource-card a').count(), 0);
+            assert.match(await p.locator('#resource-status').innerText(), /could not load/); assert.equal(await p.locator('.resource-card a').count(), 3);
+            assert.doesNotMatch(await p.locator('#resource-list').innerText(), /stars/);
             await screenshot('api-error-retry'); await p.unroute('https://api.github.com/repos/**');
             await p.locator('#refresh-resources').click(); await p.waitForFunction(() => !document.getElementById('refresh-resources').disabled);
             assert.equal(await p.locator('.resource-card a').count(), 3);

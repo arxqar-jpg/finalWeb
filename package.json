@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.cjs",
     "check": "node tools/check.cjs",
-    "test": "node tests/core-browser-tests.cjs && node tests/storage-edge-tests.cjs && node tests/final-requirements-tests.cjs && node tests/registration-regression-tests.cjs && node tests/submission-regression-tests.cjs"
+    "test": "node tests/core-browser-tests.cjs && node tests/storage-edge-tests.cjs && node tests/final-requirements-tests.cjs && node tests/registration-regression-tests.cjs && node tests/submission-regression-tests.cjs && node tests/rubric-polish-tests.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

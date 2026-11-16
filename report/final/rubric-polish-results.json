@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-11-16T10:04:59.844Z",
+  "base": "http://127.0.0.1:4189/",
+  "browser": "157.0.8103.78",
+  "apiSuccess": "Explicit fixtures in this regression suite; real API checked in final-requirements-tests.cjs.",
+  "passed": [
+    "Both themes retain readable text and selected/hovered controls meet 4.5:1 contrast",
+    "Larger metadata preserves all six layouts and mobile header controls at 320–1440px",
+    "Cold API failure keeps three useful learning links, then Retry restores live metadata",
+    "Expired saved API data remains visible and identified during an outage",
+    "Rate-limit reset and Retry-After stop repeat calls across refresh/reload, then allow recovery",
+    "Malformed API data and corrupt cooldown never produce invented statistics or broken links"
+  ],
+  "errors": []
+}

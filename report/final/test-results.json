@@ -1,6 +1,6 @@
 {
-  "verifiedAt": "2026-11-13T08:03:16.396Z",
-  "base": "http://127.0.0.1:4173/",
+  "verifiedAt": "2026-11-16T10:05:42.860Z",
+  "base": "http://127.0.0.1:4189/",
   "browser": "157.0.8103.78",
   "passed": [
     "Local API returns the curated 18-question bank and all pages initialize offline jQuery",

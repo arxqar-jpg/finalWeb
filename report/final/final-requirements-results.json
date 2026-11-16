@@ -1,6 +1,6 @@
 {
-  "verifiedAt": "2026-11-13T08:05:29.834Z",
-  "base": "http://127.0.0.1:4173/",
+  "verifiedAt": "2026-11-16T10:06:46.782Z",
+  "base": "http://127.0.0.1:4189/",
   "browser": "157.0.8103.78",
   "passed": [
     "Six connected pages have unique IDs, valid assets and JavaScript-only forms",
